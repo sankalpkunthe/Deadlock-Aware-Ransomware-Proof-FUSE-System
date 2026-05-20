@@ -13,7 +13,7 @@ print("[*] Compiling and injecting eBPF Kernel Probe...")
 
 bpf_program = BPF(src_file=os.path.join(os.path.dirname(__file__), "vfs_monitor.c"), cflags=["-Wno-duplicate-decl-specifier"])
 
-print("[*] eBPF successfully attached to vfs_write. Monitoring whole system...")
+print("[*] eBPF successfully attached to vfs_write. Monitoring whole system")
 print(f"[*] Alert Threshold: >{WRITE_THRESHOLD} writes/sec\n")
 print(f"{'PID':<10} | {'PROCESS':<15} | {'BEHAVIORAL VERDICT'}")
 print("-" * 50)
